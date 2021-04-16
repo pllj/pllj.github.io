@@ -21,15 +21,15 @@
     
     
     <meta name="keywords" content="ACM 题解 组合数学">
-    <meta name="description" content="题意给定一个含有 $n  m \quad (nm \le 3 \cdot 10^5)$ 个格子的矩形，一开始每个格子被涂上了黑色或白色，现在可以选择将每个白色格子涂成蓝色或者红色（设白色格子的数目为 $w$ ， 显然共有 $2^w$ 种涂色的方法）。接下来在涂好色的矩形中放置大小为 $1 \times 2$ 大小的多米诺骨牌，放置的位置只能是同一行相邻的两个红色格子或者同一列相邻的两个蓝色格子上，">
+    <meta name="description" content="题意给定一个含有 $n \times m \quad (nm \le 3 \cdot 10^5)$ 个格子的矩形，一开始每个格子被涂上了黑色或白色，现在可以选择将每个白色格子涂成蓝色或者红色（设白色格子的数目为 $w$ ， 显然共有 $2^w$ 种涂色的方法）。接下来在涂好色的矩形中放置大小为 $1 \times 2$ 大小的多米诺骨牌，放置的位置只能是同一行相邻的两个红色格子或者同一列相邻的两个">
 <meta name="keywords" content="ACM 题解 组合数学">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CF1511 E. Colorings and Dominoes">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2021&#x2F;04&#x2F;17&#x2F;CF1511E&#x2F;index.html">
 <meta property="og:site_name" content="Zhu Junchao&#39;s Blog">
-<meta property="og:description" content="题意给定一个含有 $n  m \quad (nm \le 3 \cdot 10^5)$ 个格子的矩形，一开始每个格子被涂上了黑色或白色，现在可以选择将每个白色格子涂成蓝色或者红色（设白色格子的数目为 $w$ ， 显然共有 $2^w$ 种涂色的方法）。接下来在涂好色的矩形中放置大小为 $1 \times 2$ 大小的多米诺骨牌，放置的位置只能是同一行相邻的两个红色格子或者同一列相邻的两个蓝色格子上，">
+<meta property="og:description" content="题意给定一个含有 $n \times m \quad (nm \le 3 \cdot 10^5)$ 个格子的矩形，一开始每个格子被涂上了黑色或白色，现在可以选择将每个白色格子涂成蓝色或者红色（设白色格子的数目为 $w$ ， 显然共有 $2^w$ 种涂色的方法）。接下来在涂好色的矩形中放置大小为 $1 \times 2$ 大小的多米诺骨牌，放置的位置只能是同一行相邻的两个红色格子或者同一列相邻的两个">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-04-16T17:09:51.889Z">
+<meta property="og:updated_time" content="2021-04-16T17:17:05.670Z">
 <meta name="twitter:card" content="summary">
     
     <link rel="shortcut icon" href="/favicon.ico">
@@ -186,7 +186,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>给定一个含有 $n <em> m \quad (nm \le 3 \cdot 10^5)$ 个格子的矩形，一开始每个格子被涂上了黑色或白色，现在可以选择将每个白色格子涂成蓝色或者红色（设白色格子的数目为 $w$ ， 显然共有 $2^w$ 种涂色的方法）。接下来在涂好色的矩形中放置大小为 $1 \times 2$ 大小的多米诺骨牌，放置的位置只能是<strong>同一行相邻的两个红色格子</strong>或者<strong>同一列相邻的两个蓝色格子</strong>上，且每个格子最多只能被骨牌覆盖一次。对于每一种涂色方式都要最大化所放置骨牌的数量，问 $2</em>w$ 种涂色方案所能放置骨牌数量的总和为多少。</p>
+            <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>给定一个含有 $n \times m \quad (nm \le 3 \cdot 10^5)$ 个格子的矩形，一开始每个格子被涂上了黑色或白色，现在可以选择将每个白色格子涂成蓝色或者红色（设白色格子的数目为 $w$ ， 显然共有 $2^w$ 种涂色的方法）。接下来在涂好色的矩形中放置大小为 $1 \times 2$ 大小的多米诺骨牌，放置的位置只能是<strong>同一行相邻的两个红色格子</strong>或者<strong>同一列相邻的两个蓝色格子</strong>上，且每个格子最多只能被骨牌覆盖一次。对于每一种涂色方式都要最大化所放置骨牌的数量，问 $2*w$ 种涂色方案所能放置骨牌数量的总和为多少。</p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>对于某一个格子，当它的颜色确定时，它所能产生的贡献的方式是固定的（若为红色则只能在水平方向产生贡献，若为蓝色则只能在垂直方向产生贡献），故我们可以将水平和垂直的贡献（即红色和蓝色的贡献）分开考虑。</p>
 <p>以水平方向的贡献为例，对于每行，显然有黑色格子间隔的两边不会相互干扰。我们考虑每一段连续的白色段，<strong>贪心放置骨牌</strong>（即依次横着摆过去，显然这样能保证放置骨牌数量最大化）设其长度为 $x$，显然当 $x &lt; 2$ 时对答案没有贡献。设 $dp[i]$ 表示按照上述贪心策略，连续长度为 $i + 2$ 的白色段<strong>使得最后两个格子能放置多米诺骨牌的方案数</strong>。当 $i = 0$ , 即 $x = 2$ 时，$dp[0] = 1$（当且仅当两个格子都为红色时）；当 $i = 1$ , 即 $x = 3$ 时，$dp[1] = 1$ （当第一个格子为蓝色，后两个格子为红色时能产生贡献）；当 $i = 2$ , 即 $x = 4$ 时，$dp[2] = 3$ （后两个格子为红色，第二个格子为蓝色时第一个格子两种颜色都可，或者前两个格子也都为红色）……以此类推，当 $i &gt;= 3$ 时可得如下递推关系：</p>
 <script type="math/tex; mode=display">
@@ -203,7 +203,7 @@ dp[i] = 2^{i - 1} + dp[i - 2]</script><p>即当 $x - 2$ 位置为蓝色时之前
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2021-04-16T17:09:51.889Z" itemprop="dateUpdated">2021-04-17 01:09:51</time>
+    Last updated: <time datetime="2021-04-16T17:17:05.670Z" itemprop="dateUpdated">2021-04-17 01:17:05</time>
 </span><br>
 
 
