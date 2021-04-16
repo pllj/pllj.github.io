@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>UCF Local Programming Contest 2015 | Zhu Junchao&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="ACM">
+    <meta name="description" content="比赛来源A题题意每组给定10个数，若这些数中同时含有17和18，输出both；只含有17，输出Zack；只含有18，输出Mack；既没有17又没有18，输出none。 思路开两个变量分别记录是否出现17和18，然后根据值判断输出即可。 代码1#include&amp;lt;iostream&amp;gt;2#include&amp;lt;cstdio&amp;gt;3using namespace std;4int a[15];">
+<meta name="keywords" content="ACM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UCF Local Programming Contest 2015">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;29&#x2F;UCFLPC2015&#x2F;index.html">
+<meta property="og:site_name" content="Zhu Junchao&#39;s Blog">
+<meta property="og:description" content="比赛来源A题题意每组给定10个数，若这些数中同时含有17和18，输出both；只含有17，输出Zack；只含有18，输出Mack；既没有17又没有18，输出none。 思路开两个变量分别记录是否出现17和18，然后根据值判断输出即可。 代码1#include&amp;lt;iostream&amp;gt;2#include&amp;lt;cstdio&amp;gt;3using namespace std;4int a[15];">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;pllj.github.io&#x2F;img&#x2F;g1.png">
+<meta property="og:updated_time" content="2020-03-20T05:51:55.374Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;pllj.github.io&#x2F;img&#x2F;g1.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+	<link rel="stylesheet" href="https://pllj.github.io/css/mystyle.css">
+    <script>window.lazyScripts=[]</script>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/main.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Zhu Junchao</h5>
+          <a href="mailto:1169614863@qq.com" target="_blank" rel="noopener" title="1169614863@qq.com" class="mail">1169614863@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/pllj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">UCF Local Programming Contest 2015</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">UCF Local Programming Contest 2015</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-02-29T06:26:52.000Z" itemprop="datePublished" class="page-time">
+  2020-02-29
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#比赛来源"><span class="post-toc-number">1.</span> <span class="post-toc-text">比赛来源</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#A题"><span class="post-toc-number">2.</span> <span class="post-toc-text">A题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#B题"><span class="post-toc-number">3.</span> <span class="post-toc-text">B题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-1"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C题"><span class="post-toc-number">4.</span> <span class="post-toc-text">C题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意-2"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-2"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-2"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#D题"><span class="post-toc-number">5.</span> <span class="post-toc-text">D题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意-3"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-3"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-3"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E题"><span class="post-toc-number">6.</span> <span class="post-toc-text">E题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意-4"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-4"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-4"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#F题"><span class="post-toc-number">7.</span> <span class="post-toc-text">F题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-5"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-5"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#G题"><span class="post-toc-number">8.</span> <span class="post-toc-text">G题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意-5"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-6"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-6"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#H题"><span class="post-toc-number">9.</span> <span class="post-toc-text">H题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意-6"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-7"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-7"><span class="post-toc-number">9.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#I题"><span class="post-toc-number">10.</span> <span class="post-toc-text">I题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意-7"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-8"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-8"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#J题"><span class="post-toc-number">11.</span> <span class="post-toc-text">J题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意-8"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-9"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-9"><span class="post-toc-number">11.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#K题"><span class="post-toc-number">12.</span> <span class="post-toc-text">K题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题意-9"><span class="post-toc-number">12.1.</span> <span class="post-toc-text">题意</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路-10"><span class="post-toc-number">12.2.</span> <span class="post-toc-text">思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码-10"><span class="post-toc-number">12.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number"></span> <span class="post-toc-text">总结</span></a>
+        </nav>
+    </aside>
+
+
+<article id="post-UCFLPC2015"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">UCF Local Programming Contest 2015</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-02-29 14:26:52" datetime="2020-02-29T06:26:52.000Z"  itemprop="datePublished">2020-02-29</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="比赛来源"><a href="#比赛来源" class="headerlink" title="比赛来源"></a><a href="https://www.jisuanke.com/contest/7330" target="_blank" rel="noopener">比赛来源</a></h3><h3 id="A题"><a href="#A题" class="headerlink" title="A题"></a>A题</h3><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>每组给定10个数，若这些数中同时含有17和18，输出both；只含有17，输出Zack；只含有18，输出Mack；既没有17又没有18，输出none。</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>开两个变量分别记录是否出现17和18，然后根据值判断输出即可。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">15</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> i,j,k,m,n,t;<span class="keyword">bool</span> f1,f2;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">while</span>(t--)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		f1=f2=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(a[i]==<span class="number">17</span>) f1=<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(a[i]==<span class="number">18</span>) f2=<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++) <span class="built_in">printf</span>(i==<span class="number">10</span>?<span class="string">"%d"</span>:<span class="string">"%d "</span>,a[i]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span>(f1)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(f2) <span class="built_in">printf</span>(<span class="string">"both\n"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"zack\n"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(f2) <span class="built_in">printf</span>(<span class="string">"mack\n"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"none\n"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="B题"><a href="#B题" class="headerlink" title="B题"></a>B题</h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><p>分别给出美国和俄罗斯的金、银、铜牌数量，同时有两种决定排名的方式，count（奖牌数多的靠前）和color（依次金银铜牌的数量，首先出现某种奖牌多的靠前），问美国通过哪种方式排名可以领先俄罗斯，两种都不能输出none，两种都能输出both。</p>
+<h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h4><p>分别通过两种方式比较并用变量标记结果，最后根据变量的不同值进行输出。</p>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">MD</span>&#123;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> g,s,b,sum;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;a[<span class="number">2</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>==(<span class="keyword">const</span> MD &amp;x,<span class="keyword">const</span> MD &amp;y)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(x.g==y.g&amp;&amp;x.s==y.s&amp;&amp;x.b==y.b) <span class="keyword">return</span> <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&gt;(<span class="keyword">const</span> MD &amp;x,<span class="keyword">const</span> MD &amp;y)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(x.g!=y.g) <span class="keyword">return</span> x.g&gt;y.g;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(x.s!=y.s) <span class="keyword">return</span> x.s&gt;y.s;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> x.b&gt;y.b;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> i,j,k,m,n,t;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">while</span>(t--)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		k=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=<span class="number">1</span>;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a[i].g,&amp;a[i].s,&amp;a[i].b);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">			a[i].sum=a[i].g+a[i].s+a[i].b;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d %d %d "</span>,a[<span class="number">0</span>].g,a[<span class="number">0</span>].s,a[<span class="number">0</span>].b);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d %d %d\n"</span>,a[<span class="number">1</span>].g,a[<span class="number">1</span>].s,a[<span class="number">1</span>].b);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span>(a[<span class="number">0</span>].sum&gt;a[<span class="number">1</span>].sum) k=<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span>(a[<span class="number">0</span>]&gt;a[<span class="number">1</span>]) k+=<span class="number">2</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">switch</span> (k)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">case</span> <span class="number">0</span>:<span class="built_in">printf</span>(<span class="string">"none\n"</span>);<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">case</span> <span class="number">1</span>:<span class="built_in">printf</span>(<span class="string">"count\n"</span>);<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">case</span> <span class="number">2</span>:<span class="built_in">printf</span>(<span class="string">"color\n"</span>);<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">case</span> <span class="number">3</span>:<span class="built_in">printf</span>(<span class="string">"both\n"</span>);<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="C题"><a href="#C题" class="headerlink" title="C题"></a>C题</h3><h4 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h4><p>初始有n块蛋糕，会有m波学生来分，对于每一波学生若当前蛋糕数量小于等于学生数量，就把剩下的每块蛋糕都切开，即蛋糕数量翻倍。输出每波蛋糕分过后剩余蛋糕的数量。</p>
+<h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><p>模拟即可。</p>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> i,j,k,m,n,t,g,l;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(k=<span class="number">1</span>;k&lt;=t;k++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"Practice #%d: %d %d\n"</span>,k,n,m);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;g);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">while</span>(g--)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;l);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">while</span>(l&gt;=m) m*=<span class="number">2</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			m-=l;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,l,m);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="D题"><a href="#D题" class="headerlink" title="D题"></a>D题</h3><h4 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h4><p>你开了一家柠檬店。已知制作一杯柠檬汁需要x个柠檬和s盎司糖，给出d天时间每天需要制作的柠檬水数量和当天每个柠檬和每5磅糖的价格，问在满足这d天需求的情况下购入柠檬和糖的最小花费。</p>
+<h4 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h4><p>贪心，每天先将前面剩下的糖先用完，然后以这天及之前中最低的价格购入能满足最小需要的柠檬和糖，并记录剩余数量供之后使用</p>
+<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> i,j,k,m,n,t,d,x,s,c,pl,ps,nl,ns,ls=<span class="number">0</span>,upl=<span class="number">10000</span>,ups=<span class="number">10000</span>,cst=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">while</span>(t--)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;d,&amp;x,&amp;s);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		cst=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		upl=ups=<span class="number">10000</span>;ls=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=d;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;c,&amp;pl,&amp;ps);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(upl&gt;pl) upl=pl;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(ups&gt;ps) ups=ps;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">int</span> u;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">			nl=c*x;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(s*c&gt;ls)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">				ns=s*c-ls;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">				ls=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">				u=(ns<span class="number">-1</span>)/<span class="number">80</span>+<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">				ns=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">				u=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">				ls-=s*c;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">			&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">			cst+=nl*upl+u*ups;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">			ls+=u*<span class="number">80</span>-ns;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,cst);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="E题"><a href="#E题" class="headerlink" title="E题"></a>E题</h3><h4 id="题意-4"><a href="#题意-4" class="headerlink" title="题意"></a>题意</h4><p>给出一个圆的半径r与一个正方形的边长s，两者中心重合，问圆和正方形重叠部分的面积。</p>
+<h4 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h4><p>（1）当 $2r \ge \sqrt 2L$ 时，重合部分面积等于 $S_{正方形}=L^2$ 。</p>
+<p>（2）当$2r \le L$ 时，重合部分面积等于 $S_圆 = \pi R^2$ 。</p>
+<p>（3）其它情况：$𝑆 = \pi 𝑅^2 − 4(\frac{2 \theta }{2 \pi }𝜋𝑅^2 − \frac{1}{2} 𝑅 \cos 𝜃 × 2𝑅 \sin 𝜃)$  (其中$\theta = \arccos \frac{𝐿}{2R}$) </p>
+<h4 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> pi=<span class="number">3.14159265358979</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> i,j,k,m,n,t,s,r;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">while</span>(t--)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;s,&amp;r);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span>(s&lt;=<span class="built_in">sqrt</span>(<span class="number">2</span>)*r) <span class="built_in">printf</span>(<span class="string">"%.2lf\n"</span>,(<span class="keyword">double</span>)s*s);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(s&gt;=<span class="number">2</span>*r) <span class="built_in">printf</span>(<span class="string">"%.2lf\n"</span>,pi*r*r);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">double</span> ans=(<span class="keyword">double</span>)s*<span class="built_in">sqrt</span>(<span class="number">4</span>*r*r-s*s)+(pi<span class="number">-4</span>*<span class="built_in">acos</span>((<span class="keyword">double</span>)s/(<span class="number">2</span>*r)))*r*r;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">			<span class="built_in">printf</span>(<span class="string">"%.2lf\n"</span>,ans);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="F题"><a href="#F题" class="headerlink" title="F题"></a>F题</h3><p>将 $a,e,i,o,u,y$ 认为是元音字母，其他字母为辅音字母。现给出一个由小写字母和 $?$ 组成的字符串,在每个 $?$ 处可以填充任意一个字母，问有多少种填充方案可以使得该字符串的任意偶数长度的子串的元音和辅音字母个数相同。</p>
+<h4 id="思路-5"><a href="#思路-5" class="headerlink" title="思路"></a>思路</h4><p>分析可知要使字符串满足条件，字符串必须是元音辅音交错的形式，因此可以以假设元音开头和辅音开头分别进行dfs，如遇到 $?$ 则将方案数乘以相应字母的数量（元音乘6，辅音乘20），如果遇到某个已填字母与应填字母类型不同的则返回0，表示不存在。</p>
+<h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">105</span>],l;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pd</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(c==<span class="string">'?'</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(c==<span class="string">'a'</span>||c==<span class="string">'e'</span>||c==<span class="string">'i'</span>||c==<span class="string">'o'</span>||c==<span class="string">'u'</span>||c==<span class="string">'y'</span>) <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> w[]=&#123;<span class="number">6</span>,<span class="number">20</span>&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> f)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(x==l) <span class="keyword">return</span> <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ea=<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(a[x]==<span class="number">1</span>-f) <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(a[x]==<span class="number">-1</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		ea*=w[f];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">	ea*=dfs(x+<span class="number">1</span>,<span class="number">1</span>-f);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> ea;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> i,j,k,m,n,t;<span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(k=<span class="number">1</span>;k&lt;=t;k++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">cin</span>&gt;&gt;s;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">		ans=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">		l=s.size();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;l;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">			a[i]=pd(s[i]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=<span class="number">1</span>;i++) ans+=dfs(<span class="number">0</span>,i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">printf</span>(<span class="string">"String #%d: %lld\n\n"</span>,k,ans);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="G题"><a href="#G题" class="headerlink" title="G题"></a>G题</h3><h4 id="题意-5"><a href="#题意-5" class="headerlink" title="题意"></a>题意</h4><p>给出一个 $N*N$ 的棋盘，初始时在 $(1,1)$ 位置有一个 $d$ 层的汉诺塔，现要求把该塔按照原来的顺序移动到右下角所需的最小步数，要求每次只能将一个圆盘向右或向下移动一格，除了左上角和右下角的格子外每个格子只能放一个圆盘，大圆盘只能放小圆盘下面。</p>
+<h4 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h4><p>经过分析，每个圆盘从左上角移动到右下角需要的步数最少也只能为 $2n-2$ 步，所以若有解，则解必然为 $2d(n-1)$。</p>
+<p>再考虑无解的情况，由于最底层的圆盘要先放入右下角， 每个格子只能放一个圆盘，同时需要留出一条能够从左上角到右下角的通路，所以当 $d-1&gt;(N-1)^2$ 时无解。</p>
+<h4 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> i,j,k,m,n,t,d;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=t;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;d,&amp;n);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">int</span> ans=d*<span class="number">2</span>*(n<span class="number">-1</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span>((n<span class="number">-1</span>)*(n<span class="number">-1</span>)&lt;d<span class="number">-1</span>) <span class="built_in">printf</span>(<span class="string">"Grid #%d: impossible\n\n"</span>,i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"Grid #%d: %d\n\n"</span>,i,ans);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h3 id="H题"><a href="#H题" class="headerlink" title="H题"></a>H题</h3><h4 id="题意-6"><a href="#题意-6" class="headerlink" title="题意"></a>题意</h4><p>有一个如图形状的印章，黑色部分会蘸有涂料。 给你一个𝑟行𝑐列的图像（ $1 ≤ 𝑟, 𝑐 ≤ 9 $），要求用该印章敲出这个图像，求最少的 操作步数。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://pllj.github.io/img/g1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h4 id="思路-7"><a href="#思路-7" class="headerlink" title="思路"></a>思路</h4><p>待补题</p>
+<h4 id="代码-7"><a href="#代码-7" class="headerlink" title="代码"></a>代码</h4><p>待补题</p>
+<h3 id="I题"><a href="#I题" class="headerlink" title="I题"></a>I题</h3><h4 id="题意-7"><a href="#题意-7" class="headerlink" title="题意"></a>题意</h4><p>给出一个 $𝑛(𝑛 ≤ 500)$ 个点的有向图，任意两个点之间有且仅一条有向边。 求一条不重复经过一个点的最长的简单路径。</p>
+<h4 id="思路-8"><a href="#思路-8" class="headerlink" title="思路"></a>思路</h4><p>待补题</p>
+<h4 id="代码-8"><a href="#代码-8" class="headerlink" title="代码"></a>代码</h4><p>待补题</p>
+<h3 id="J题"><a href="#J题" class="headerlink" title="J题"></a>J题</h3><h4 id="题意-8"><a href="#题意-8" class="headerlink" title="题意"></a>题意</h4><p>有$𝑛(𝑛 ≤ 50)$个学生，要分配到两个班级。给出每个学生在两个班级中能通过考试的概率。 而且若学生 $𝑖$ 和 $𝑗$ 在同一个班级中，学生 $𝑖$ 通过考试的概率将会增加 $𝑎_{𝑖𝑗}$ 。 给出每个 $𝑎_{𝑖𝑗}$ ，且保证无论怎样分配，任意一个学生通过考试的概率都在 $[0,1]$ 范围内。</p>
+<h4 id="思路-9"><a href="#思路-9" class="headerlink" title="思路"></a>思路</h4><p>待补题</p>
+<h4 id="代码-9"><a href="#代码-9" class="headerlink" title="代码"></a>代码</h4><p>待补题</p>
+<h3 id="K题"><a href="#K题" class="headerlink" title="K题"></a>K题</h3><h4 id="题意-9"><a href="#题意-9" class="headerlink" title="题意"></a>题意</h4><p>给定正整数 $𝑋$ 和 $𝑁$ （$1 ≤ 𝑋, 𝑁 &lt; 2^{31}$），定义集合 $𝑇 = {𝑇_𝑖 |1 ≤ 𝑖 ≤ 𝑁 + 1}, 𝑇_𝑖 = ( ^{𝑁} _{𝑖−1} )𝑋^{𝑖−1}$ 。 要求选出 $𝑇$ 的一个非空子集 $𝑆$ ，使得$∏_{𝑖∈𝑆} 𝑇_𝑖 ≡ 2 (𝑚𝑜𝑑 4)$ ，并最大化 $∑_{𝑖∈𝑆}i$ 。 输出最大的 $∑_{𝑖∈𝑆}i$ 。若不存在，输出 0。</p>
+<h4 id="思路-10"><a href="#思路-10" class="headerlink" title="思路"></a>思路</h4><p>待补题</p>
+<h4 id="代码-10"><a href="#代码-10" class="headerlink" title="代码"></a>代码</h4><p>待补题</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这场比赛的总体难度较低，但在解题过程中仍出现了像输出格式错误，变量打错等一些细节上的问题。同时，在对英文题面的阅读和理解上效率较低，有些题敲到一般才发现理解错了题意，导致浪费了很多时间。另外，接触的难题比较少，因此还需要接触更多的算法和通过更多的练习来积累经验。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-03-20T05:51:55.374Z" itemprop="dateUpdated">2020-03-20 13:51:55</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2020/02/29/UCFLPC2015/" target="_blank" rel="external">http://yoursite.com/2020/02/29/UCFLPC2015/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/main.jpg" alt="Zhu Junchao">
+            Zhu Junchao
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/" rel="tag">ACM</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/02/29/UCFLPC2015/&title=《UCF Local Programming Contest 2015》 — Zhu Junchao's Blog&pic=http://yoursite.com/img/main.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/02/29/UCFLPC2015/&title=《UCF Local Programming Contest 2015》 — Zhu Junchao's Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/02/29/UCFLPC2015/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《UCF Local Programming Contest 2015》 — Zhu Junchao's Blog&url=http://yoursite.com/2020/02/29/UCFLPC2015/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/02/29/UCFLPC2015/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_self" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/03/20/opencv/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">OpenCV入门笔记</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/01/04/mpt/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">爬虫实战</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Zhu Junchao &copy; 2019 - 2021</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_self" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/02/29/UCFLPC2015/&title=《UCF Local Programming Contest 2015》 — Zhu Junchao's Blog&pic=http://yoursite.com/img/main.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/02/29/UCFLPC2015/&title=《UCF Local Programming Contest 2015》 — Zhu Junchao's Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/02/29/UCFLPC2015/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《UCF Local Programming Contest 2015》 — Zhu Junchao's Blog&url=http://yoursite.com/2020/02/29/UCFLPC2015/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/02/29/UCFLPC2015/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/02/29/UCFLPC2015/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '人呢！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又回来了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+<script src="//pllj.github.io/js/my.js"></script>
+</body>
+</html>

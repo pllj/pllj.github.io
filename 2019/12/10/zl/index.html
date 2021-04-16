@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>C语言个人整理 | Zhu Junchao&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="C语言">
+    <meta name="description" content="写在前面 这个文档是我自己整理的，所以可能会有一些不妥和错误的地方，欢迎大家指正。 因代码风格因人而异，这些代码只是作为一个参考，具体根据自己的习惯和喜好来编写即可。 要深刻理解每句代码的含义，这样才能在需要时能够灵活运用。不要死记硬背！  规范建议 初始化：在定义变量时，明确该变量的作用，从而确定是否需要赋初值。（如当变量需用于求和、计数时需要赋初值为0） 数组定义：不要使用变量（尤其是未经初始">
+<meta name="keywords" content="C语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言个人整理">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;zl&#x2F;index.html">
+<meta property="og:site_name" content="Zhu Junchao&#39;s Blog">
+<meta property="og:description" content="写在前面 这个文档是我自己整理的，所以可能会有一些不妥和错误的地方，欢迎大家指正。 因代码风格因人而异，这些代码只是作为一个参考，具体根据自己的习惯和喜好来编写即可。 要深刻理解每句代码的含义，这样才能在需要时能够灵活运用。不要死记硬背！  规范建议 初始化：在定义变量时，明确该变量的作用，从而确定是否需要赋初值。（如当变量需用于求和、计数时需要赋初值为0） 数组定义：不要使用变量（尤其是未经初始">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-10T01:07:27.369Z">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+	<link rel="stylesheet" href="https://pllj.github.io/css/mystyle.css">
+    <script>window.lazyScripts=[]</script>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/main.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Zhu Junchao</h5>
+          <a href="mailto:1169614863@qq.com" target="_blank" rel="noopener" title="1169614863@qq.com" class="mail">1169614863@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/pllj" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">C语言个人整理</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" target="_self" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">C语言个人整理</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-12-10T01:04:52.000Z" itemprop="datePublished" class="page-time">
+  2019-12-10
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#写在前面"><span class="post-toc-number">1.</span> <span class="post-toc-text">写在前面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#规范建议"><span class="post-toc-number">2.</span> <span class="post-toc-text">规范建议</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#做题技巧："><span class="post-toc-number">3.</span> <span class="post-toc-text">做题技巧：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实用程序片段"><span class="post-toc-number">4.</span> <span class="post-toc-text">实用程序片段</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#将一个数的每位数字取出存入数组"><span class="post-toc-number">4.0.1.</span> <span class="post-toc-text">将一个数的每位数字取出存入数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#n进制转十进制-2-le-n-le-16"><span class="post-toc-number">4.0.2.</span> <span class="post-toc-text">n进制转十进制($2\le n \le 16$)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#写法一-倒序循环-："><span class="post-toc-number">4.0.2.1.</span> <span class="post-toc-text">写法一(倒序循环)：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#（可能更加方便的）写法二（正序循环）："><span class="post-toc-number">4.0.2.2.</span> <span class="post-toc-text">（可能更加方便的）写法二（正序循环）：</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#十进制转n进制（-2-le-n-le-16-）"><span class="post-toc-number">4.0.3.</span> <span class="post-toc-text">十进制转n进制（$2\le n \le 16$）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#排序"><span class="post-toc-number">4.0.4.</span> <span class="post-toc-text">排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#冒泡排序"><span class="post-toc-number">4.0.4.1.</span> <span class="post-toc-text">冒泡排序</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#选择排序"><span class="post-toc-number">4.0.4.2.</span> <span class="post-toc-text">选择排序</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#求最大公约数（辗转相除法-欧几里得算法）"><span class="post-toc-number">4.0.5.</span> <span class="post-toc-text">求最大公约数（辗转相除法/欧几里得算法）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#素数判断"><span class="post-toc-number">4.0.6.</span> <span class="post-toc-text">素数判断</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-zl"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">C语言个人整理</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-12-10 09:04:52" datetime="2019-12-10T01:04:52.000Z"  itemprop="datePublished">2019-12-10</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ul>
+<li>这个文档是我自己整理的，所以可能会有一些不妥和错误的地方，欢迎大家指正。</li>
+<li>因代码风格因人而异，这些代码只是作为一个参考，具体根据自己的习惯和喜好来编写即可。</li>
+<li>要深刻理解每句代码的含义，这样才能在需要时能够灵活运用。<strong>不要死记硬背！</strong></li>
+</ul>
+<h2 id="规范建议"><a href="#规范建议" class="headerlink" title="规范建议"></a>规范建议</h2><ul>
+<li><strong>初始化</strong>：在定义变量时，明确该变量的作用，从而确定是否需要赋初值。（如当变量需用于求和、计数时需要赋初值为0）</li>
+<li><strong>数组定义</strong>：不要使用变量（尤其是<strong>未经初始化的变量</strong>）定义数组长度，直接将数组长度开到最大数据范围加一个常数即可。</li>
+<li><strong>代码缩进</strong>：在编写代码时注意缩进，这样代码可读性高，后期调试和修改也方便（dev-c++万不得已时可使用Astyle格式化文件）</li>
+<li><strong>对于指针</strong>：需要掌握，但是否使用取决于个人习惯，如果实在用不来可以使用其它方式代替（比如全局变量，数组传参等）</li>
+<li><strong>浮点计算</strong>：为了尽量避免精度误差，浮点数计算尽量用double（同时输入时改用%lf，输出时仍用%f）</li>
+</ul>
+<h2 id="做题技巧："><a href="#做题技巧：" class="headerlink" title="做题技巧："></a>做题技巧：</h2><ul>
+<li><p>平时多做题，锻炼自己的思维、编程能力和解题速度</p>
+</li>
+<li><p>先构思好算法思路，再开始编写代码</p>
+</li>
+<li><p>利用辅助变量（可以通过某个变量的几种不同的值来表示不同的情况）</p>
+</li>
+<li><p>字符可以直接使用ASCII码参与比较和计算（几个常用字符的ASCII码：’0’-48 ‘a’-97  ‘A’-65）</p>
+</li>
+<li><p>寻找代码操作重复部分加以合并，从而简化代码，节省时间的同时降低后续调试难度</p>
+</li>
+</ul>
+<p>​     例：车牌限行</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> i,j,k,m,n,d,w,cp;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;d,&amp;w,&amp;cp);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	cp%=<span class="number">10</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d "</span>,cp);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(d&gt;=<span class="number">6</span>) <span class="built_in">printf</span>(<span class="string">"no"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span>(w&lt;<span class="number">200</span>) <span class="built_in">printf</span>(<span class="string">"no"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(w&lt;<span class="number">400</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(cp==d||cp==((d+<span class="number">5</span>)%<span class="number">10</span>)) <span class="built_in">printf</span>(<span class="string">"yes"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"no"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(d%<span class="number">2</span>==cp%<span class="number">2</span>) <span class="built_in">printf</span>(<span class="string">"yes"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"no"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<ul>
+<li><p>注意查看数据范围，考虑极端数据情况</p>
+</li>
+<li><p>输入输出（要求，格式，善于观察样例），根据需要选用输入输出方式。</p>
+</li>
+<li><p>调试（造数据、利用调试工具或者过程变量输出）</p>
+</li>
+<li><p>写题过程中注意备份任何可能有价值的代码</p>
+</li>
+<li><p>合理规划时间，把题目都简单看一遍（难度不一定单调递增）</p>
+</li>
+<li><p>如果题目难实在做不出来可以尝试<del>骗分</del>拿部分分</p>
+</li>
+</ul>
+<h2 id="实用程序片段"><a href="#实用程序片段" class="headerlink" title="实用程序片段"></a>实用程序片段</h2><h4 id="将一个数的每位数字取出存入数组"><a href="#将一个数的每位数字取出存入数组" class="headerlink" title="将一个数的每位数字取出存入数组"></a>将一个数的每位数字取出存入数组</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//将x每位数字取出存入a数组中</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">20</span>],len=<span class="number">0</span>;<span class="comment">//用于存储数字各位的数组</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(x)&#123;<span class="comment">//while(x!=0)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    a[++len]=x%<span class="number">10</span>;<span class="comment">//取出此时的个位，等价于 len+=1;a[len]=x%10;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    x/=<span class="number">10</span>;<span class="comment">//x向左移动一位，即去掉个位</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(x==<span class="number">0</span>) a[++len]=<span class="number">0</span>;<span class="comment">//特判0</span></span></pre></td></tr></table></figure>
+<p>处理结束后，数组$a$从下标为1开始正序存储的即为x从<strong>低位到高位</strong>的值，$len$ 为数字$x$的位数。</p>
+<h4 id="n进制转十进制-2-le-n-le-16"><a href="#n进制转十进制-2-le-n-le-16" class="headerlink" title="n进制转十进制($2\le n \le 16$)"></a>n进制转十进制($2\le n \le 16$)</h4><h5 id="写法一-倒序循环-："><a href="#写法一-倒序循环-：" class="headerlink" title="写法一(倒序循环)："></a>写法一(倒序循环)：</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//将n进制数s[]（用字符数组存储）转换为十进制数x</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x=<span class="number">0</span>,w=<span class="number">1</span>;<span class="comment">//w为权值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="built_in">strlen</span>(s)<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;<span class="comment">//倒序循环，从最低位开始</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">int</span> u;<span class="comment">//存储该位的值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span>(s[i]&gt;=<span class="string">'0'</span>&amp;&amp;s[i]&lt;=<span class="string">'9'</span>) u=s[i]-<span class="string">'0'</span>;<span class="comment">//如果该位为字符‘0’~‘9’，也可用函数来判断</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(s[i]&gt;=<span class="string">'a'</span>&amp;&amp;s[i]&lt;=<span class="string">'f'</span>) u=s[i]-<span class="string">'a'</span>+<span class="number">10</span>;<span class="comment">//u=s[i]-87;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(s[i]&gt;=<span class="string">'A'</span>&amp;&amp;s[i]&lt;=<span class="string">'F'</span>) u=s[i]-<span class="string">'A'</span>+<span class="number">10</span>;<span class="comment">//u=s[i]-55; 因不确定字母大小写，所以这里全部写出，可以根据题目实际要求来选择</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    x+=u*w;<span class="comment">//将该位值*权重加到x中</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    w*=n;<span class="comment">//下一位权值为此时权值*进制数n</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>如果$n\le10$则可省略判断字母部分，若$n$进制数为int类型则将取字符的步骤改为取模，具体可以参照上一个代码。</p>
+<h5 id="（可能更加方便的）写法二（正序循环）："><a href="#（可能更加方便的）写法二（正序循环）：" class="headerlink" title="（可能更加方便的）写法二（正序循环）："></a>（可能更加方便的）写法二（正序循环）：</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(s);i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">int</span> u;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span>(s[i]&gt;=<span class="string">'0'</span>&amp;&amp;s[i]&lt;=<span class="string">'9'</span>) u=s[i]-<span class="string">'0'</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(s[i]&gt;=<span class="string">'a'</span>&amp;&amp;s[i]&lt;=<span class="string">'f'</span>) u=s[i]-<span class="string">'a'</span>+<span class="number">10</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(s[i]&gt;=<span class="string">'A'</span>&amp;&amp;s[i]&lt;=<span class="string">'F'</span>) u=s[i]-<span class="string">'A'</span>+<span class="number">10</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">//上述代码不变</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    x=x*n+u;<span class="comment">//核心语句，可以自己模拟一下</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p><strong>特别的</strong>，当$n=10$时，题目就变成<strong>将一个字符串转换为数字</strong>，上述代码则变为：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(s);i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    x=x*n+s[i]-<span class="string">'0'</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>由于方法二循环是正序的，所以可以用于<strong>依次提取字符串中的多个数字串</strong>。（P73字符串压缩；P77表达式求值）</p>
+<h4 id="十进制转n进制（-2-le-n-le-16-）"><a href="#十进制转n进制（-2-le-n-le-16-）" class="headerlink" title="十进制转n进制（$2\le n \le 16$）"></a>十进制转n进制（$2\le n \le 16$）</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//将十进制数x转化为n进制数s[]（用字符数组存储）</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> s[<span class="number">30</span>];<span class="keyword">int</span> len=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(x)&#123;<span class="comment">//while(x!=0)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">char</span> c;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">int</span> u=x%n;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span>(u&gt;=<span class="number">10</span>) c=<span class="string">'a'</span>+u<span class="number">-10</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">else</span> c=<span class="string">'0'</span>+u;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    s[++len]=c;<span class="comment">//len+=1;s[len]=c;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    x/=n;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(len==<span class="number">0</span>) s[++len]=<span class="string">'0'</span>;<span class="comment">//特判x为0的情况</span></span></pre></td></tr></table></figure>
+<p><strong>注意</strong>：此时得到的s在下标$[1,len]$上依次存储的为<strong>x转化为n进制时从低位到高位的值</strong>，需利用循环<strong>倒序</strong>输出或处理。</p>
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><h5 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//用冒泡法将a数组1~n的元素从小到大进行排序(升序)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;n-i+<span class="number">1</span>;j++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(a[j]&gt;a[j+<span class="number">1</span>])&#123;<span class="comment">//改为a[j]&lt;a[j+1]则为降序</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> tmp=a[j];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">            a[j]=a[j+<span class="number">1</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            a[j+<span class="number">1</span>]=tmp;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//若数组下标为0~n-1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;n-i<span class="number">-1</span>;j++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(a[j]&gt;a[j+<span class="number">1</span>])&#123;<span class="comment">//改为a[j]&lt;a[j+1]则为降序</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> tmp=a[j];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            a[j]=a[j+<span class="number">1</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            a[j+<span class="number">1</span>]=tmp;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h5 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//用选择法将a数组1~n的元素从小到大进行排序(升序)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">int</span> k=i;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;=n;j++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(a[k]&gt;a[j]) k=j;<span class="comment">//改为a[k]&lt;a[j]则为降序</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span>(i!=k)&#123;<span class="comment">//交换，可以不加这个if判断</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> tmp=a[i];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        a[i]=a[k];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        a[k]=tmp;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h4 id="求最大公约数（辗转相除法-欧几里得算法）"><a href="#求最大公约数（辗转相除法-欧几里得算法）" class="headerlink" title="求最大公约数（辗转相除法/欧几里得算法）"></a>求最大公约数（辗转相除法/欧几里得算法）</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//求a与b的最大公约数</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>) <span class="keyword">return</span> a;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> gcd(b,a%b);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//简洁的写法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> b==<span class="number">0</span>?a:gcd(b,a%b);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<h4 id="素数判断"><a href="#素数判断" class="headerlink" title="素数判断"></a>素数判断</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断x是不是素数，是则返回1，不是则返回0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isprime</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">2</span>) <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//最小的素数是2</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="built_in">sqrt</span>(x);i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(x%i==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//如果x有因数，则x不是素数，返回0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-12-10T01:07:27.369Z" itemprop="dateUpdated">2019-12-10 09:07:27</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/12/10/zl/" target="_blank" rel="external">http://yoursite.com/2019/12/10/zl/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/main.jpg" alt="Zhu Junchao">
+            Zhu Junchao
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag">C语言</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/12/10/zl/&title=《C语言个人整理》 — Zhu Junchao's Blog&pic=http://yoursite.com/img/main.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/12/10/zl/&title=《C语言个人整理》 — Zhu Junchao's Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/12/10/zl/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C语言个人整理》 — Zhu Junchao's Blog&url=http://yoursite.com/2019/12/10/zl/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/12/10/zl/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" target="_self" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/01/04/mpt/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">爬虫实战</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/12/05/mb/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">模板</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Zhu Junchao &copy; 2019 - 2021</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" target="_self" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/12/10/zl/&title=《C语言个人整理》 — Zhu Junchao's Blog&pic=http://yoursite.com/img/main.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/12/10/zl/&title=《C语言个人整理》 — Zhu Junchao's Blog&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/12/10/zl/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C语言个人整理》 — Zhu Junchao's Blog&url=http://yoursite.com/2019/12/10/zl/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/12/10/zl/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/12/10/zl/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '人呢！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又回来了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+<script src="//pllj.github.io/js/my.js"></script>
+</body>
+</html>
