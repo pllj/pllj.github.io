@@ -6,7 +6,7 @@ function gethitokoto(){
 	});
 };
 gethitokoto();
-$(.subtitle).click(gethitokoto)
+$(h5.subtitle).click(gethitokoto)
 		//cpp=document.getElementsByClassName("cpp");
 		//for(i=0;i<cpp.length;i++) cpp[i].onmousedown=function(){return false;};
 		//document.body.onselectstart=function(){return false;};
