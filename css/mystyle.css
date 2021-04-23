@@ -16,3 +16,8 @@ input {
   user-select: auto;
 }
 */
+.subtitle:after{
+	content: url(/icon/refresh.ico);
+	height: 16px;
+	width: 16px;
+}
