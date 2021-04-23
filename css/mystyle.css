@@ -17,5 +17,5 @@ input {
 }
 */
 .subtitle:after{
-	content: url(/icon/refresh.png);
+	content: url(/icon/refresh.ico);
 }
