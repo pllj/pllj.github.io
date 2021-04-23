@@ -16,6 +16,10 @@ input {
   user-select: auto;
 }
 */
+.subtitle{
+	pointer-events: none;
+}
 .subtitle:after{
 	content: url(/icon/refresh.ico);
+	pointer-events: auto;
 }
