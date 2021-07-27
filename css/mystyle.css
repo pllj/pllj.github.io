@@ -16,6 +16,7 @@ input {
   user-select: auto;
 }
 */
+@primaryColor: #2196F3; !important
 .subtitle{
 	pointer-events: none;
 }
